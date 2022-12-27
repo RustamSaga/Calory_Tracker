@@ -1,4 +1,4 @@
-package com.rustamsaga.tracker_presentation
+package com.rustamsaga.tracker_domain
 
 import org.junit.Test
 

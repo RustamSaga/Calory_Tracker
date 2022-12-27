@@ -40,11 +40,16 @@ android {
         kotlinCompilerExtensionVersion = Compose.composeCompilerVersion
     }
     packagingOptions {
-        exclude("META-INF/AL2.0")
-        exclude("META-INF/LGPL2.1")
-        exclude("**/attach_hotspot_windows.dll")
-        exclude("META-INF/licenses/ASM")
+        resources {
+            excludes += setOf(
+                "META-INF/AL2.0",
+                "META-INF/LGPL2.1",
+                "**/attach_hotspot_windows.dll",
+                "META-INF/licenses/ASM"
+            )
+        }
     }
+    namespace = "com.rustamsaga.callorytracker"
 }
 
 dependencies {
@@ -62,11 +67,12 @@ dependencies {
     kapt(DaggerHilt.hiltCompiler)
 
     implementation(project(Modules.core))
-//    implementation(project(Modules.onboardingPresentation))
-//    implementation(project(Modules.onboardingDomain))
-//    implementation(project(Modules.trackerPresentation))
-//    implementation(project(Modules.trackerDomain))
-//    implementation(project(Modules.trackerData))
+    implementation(project(Modules.coreUi))
+    implementation(project(Modules.onboardingPresentation))
+    implementation(project(Modules.onboardingDomain))
+    implementation(project(Modules.trackerPresentation))
+    implementation(project(Modules.trackerDomain))
+    implementation(project(Modules.trackerData))
 
     implementation(AndroidX.coreKtx)
     implementation(AndroidX.appCompat)
