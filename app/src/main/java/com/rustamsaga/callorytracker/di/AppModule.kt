@@ -5,6 +5,7 @@ import android.content.Context.MODE_PRIVATE
 import android.content.SharedPreferences
 import com.rustamsaga.core.data.preferences.DefaultPreferences
 import com.rustamsaga.core.domain.preferences.Preferences
+import com.rustamsaga.core.domain.use_case.FilterOutDigits
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -26,4 +27,12 @@ object AppModule {
     fun providePreferences(sharedPreferences: SharedPreferences): Preferences {
         return DefaultPreferences(sharedPreferences)
     }
+
+
+    @Provides
+    @Singleton
+    fun provideFilterOutDigitsUseCase(): FilterOutDigits{
+        return FilterOutDigits()
+    }
+
 }

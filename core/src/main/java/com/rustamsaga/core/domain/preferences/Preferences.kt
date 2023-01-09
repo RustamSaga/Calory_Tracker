@@ -6,6 +6,7 @@ import com.rustamsaga.core.domain.model.GoalType
 import com.rustamsaga.core.domain.model.UserInfo
 
 interface Preferences {
+    // setters
     fun saveGender(gender: Gender)
     fun saveAge(age: Int)
     fun saveWeight(weight: Float)
@@ -16,6 +17,7 @@ interface Preferences {
     fun saveProteinRatio(ratio: Float)
     fun saveFatRatio(ratio: Float)
 
+    // getters
     fun loadUserInfo(): UserInfo
 
     companion object{
