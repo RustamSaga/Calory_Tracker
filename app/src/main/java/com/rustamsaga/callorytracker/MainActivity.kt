@@ -14,8 +14,10 @@ import com.rustamsaga.callorytracker.navigation.navigate
 import com.rustamsaga.callorytracker.ui.theme.CaloryTrackerTheme
 import com.rustamsaga.core.navigation.Route
 import com.rustamsaga.core.util.UiEvent
+import com.rustamsaga.onboarding_presentation.activity.ActivityScreen
 import com.rustamsaga.onboarding_presentation.age.AgeScreen
 import com.rustamsaga.onboarding_presentation.gender.GenderScreen
+import com.rustamsaga.onboarding_presentation.height.GoalScreen
 import com.rustamsaga.onboarding_presentation.height.HeightScreen
 import com.rustamsaga.onboarding_presentation.weight.WeightScreen
 import com.rustamsaga.onboarding_presentation.welcome.WelcomeScreen
@@ -65,10 +67,14 @@ class MainActivity : ComponentActivity() {
 
                         }
                         composable(Route.ACTIVITY){
-
+                            ActivityScreen(
+                                onNavigate = navController::navigate
+                            )
                         }
                         composable(Route.GOAL){
-
+                            GoalScreen(
+                                onNavigate = navController::navigate
+                            )
                         }
                         composable(Route.TRACKER_OVERVIEW){
 
