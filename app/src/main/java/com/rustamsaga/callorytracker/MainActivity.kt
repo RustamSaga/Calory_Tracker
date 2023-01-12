@@ -19,6 +19,7 @@ import com.rustamsaga.onboarding_presentation.age.AgeScreen
 import com.rustamsaga.onboarding_presentation.gender.GenderScreen
 import com.rustamsaga.onboarding_presentation.height.GoalScreen
 import com.rustamsaga.onboarding_presentation.height.HeightScreen
+import com.rustamsaga.onboarding_presentation.nutrient_goal.NutrientGoalScreen
 import com.rustamsaga.onboarding_presentation.weight.WeightScreen
 import com.rustamsaga.onboarding_presentation.welcome.WelcomeScreen
 import dagger.hilt.android.AndroidEntryPoint
@@ -64,7 +65,10 @@ class MainActivity : ComponentActivity() {
                             )
                         }
                         composable(Route.NUTRIENT_GOAL){
-
+                            NutrientGoalScreen(
+                                scaffoldState = scaffoldState,
+                                onNavigate = navController::navigate
+                            )
                         }
                         composable(Route.ACTIVITY){
                             ActivityScreen(
