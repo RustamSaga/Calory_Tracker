@@ -1,6 +1,9 @@
 package com.rustamsaga.tracker_data.di
 
 
+import android.app.Application
+import androidx.room.Room
+import com.rustamsaga.tracker_data.local.TrackerDataBase
 import com.rustamsaga.tracker_data.remote.OpenFoodApi
 import dagger.Module
 import dagger.Provides
@@ -38,5 +41,15 @@ object TrackerDataModule {
             .client(client)
             .build()
             .create()
+    }
+
+    @Provides
+    @Singleton
+    fun provideTrackerDataBase(app: Application): TrackerDataBase{
+        return Room.databaseBuilder(
+            app,
+            TrackerDataBase::class.java,
+            "tarcker_db"
+        ).build()
     }
 }
