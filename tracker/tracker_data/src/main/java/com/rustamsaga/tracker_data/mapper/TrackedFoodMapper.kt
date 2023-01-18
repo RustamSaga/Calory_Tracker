@@ -14,7 +14,7 @@ fun TrackedFoodEntity.toTrackedFood(): TrackedFood {
         imageUrl = imageUrl,
         mealType = MealType.fromString(type),
         amount = amount,
-        data = LocalDate.of(year, month, dayOfMonth),
+        date = LocalDate.of(year, month, dayOfMonth),
         calories = calories,
         id = id
     )
@@ -29,9 +29,9 @@ fun TrackedFood.toTrackedFoodEntity(): TrackedFoodEntity {
         imageUrl = imageUrl,
         type = mealType.name,
         amount = amount,
-        dayOfMonth = data.dayOfMonth,
-        month = data.monthValue,
-        year = data.year,
+        dayOfMonth = date.dayOfMonth,
+        month = date.monthValue,
+        year = date.year,
         calories = calories,
         id = id
     )
