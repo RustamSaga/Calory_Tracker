@@ -89,4 +89,17 @@ class DefaultPreferences(
 
         )
     }
+
+    override fun saveShouldShowOnboarding(shouldShow: Boolean) {
+        sharPref.edit()
+            .putBoolean(Preferences.KEY_SHOULD_SHOW_ONBOARDING, shouldShow)
+            .apply()
+    }
+
+    override fun loadShouldShowOnboarding(): Boolean {
+        return sharPref.getBoolean(
+            Preferences.KEY_SHOULD_SHOW_ONBOARDING,
+            true
+        )
+    }
 }
