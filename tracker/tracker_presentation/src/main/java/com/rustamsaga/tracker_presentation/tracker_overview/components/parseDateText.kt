@@ -1,4 +1,4 @@
-package com.rustamsaga.tracker_presentation.components
+package com.rustamsaga.tracker_presentation.tracker_overview.components
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource

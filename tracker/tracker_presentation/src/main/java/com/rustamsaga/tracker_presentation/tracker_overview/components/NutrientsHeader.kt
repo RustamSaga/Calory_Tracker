@@ -1,4 +1,4 @@
-package com.rustamsaga.tracker_presentation.components
+package com.rustamsaga.tracker_presentation.tracker_overview.components
 
 import androidx.compose.animation.core.animateIntAsState
 import androidx.compose.foundation.background
@@ -18,6 +18,7 @@ import com.rustamsaga.core_ui.FatColor
 import com.rustamsaga.core_ui.LocalSpacing
 import com.rustamsaga.core_ui.ProteinColor
 import com.rustamsaga.tracker_presentation.R
+import com.rustamsaga.tracker_presentation.components.UnitDisplay
 import com.rustamsaga.tracker_presentation.tracker_overview.TrackerOverViewState
 
 @Composable

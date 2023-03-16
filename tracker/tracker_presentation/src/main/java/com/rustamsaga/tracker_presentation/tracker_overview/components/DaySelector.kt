@@ -1,4 +1,4 @@
-package com.rustamsaga.tracker_presentation.components
+package com.rustamsaga.tracker_presentation.tracker_overview.components
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
@@ -12,9 +12,9 @@ import androidx.compose.material.icons.filled.ArrowForward
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.layout.ParentDataModifier
 import androidx.compose.ui.res.stringResource
 import com.rustamsaga.tracker_presentation.R
+import com.rustamsaga.tracker_presentation.tracker_overview.components.parseDateText
 import java.time.LocalDate
 
 @Composable

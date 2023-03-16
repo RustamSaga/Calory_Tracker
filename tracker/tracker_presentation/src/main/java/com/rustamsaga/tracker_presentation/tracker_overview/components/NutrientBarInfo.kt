@@ -1,4 +1,4 @@
-package com.rustamsaga.tracker_presentation.components
+package com.rustamsaga.tracker_presentation.tracker_overview.components
 
 
 import androidx.compose.animation.core.Animatable
@@ -6,7 +6,6 @@ import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
@@ -23,6 +22,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.rustamsaga.tracker_presentation.R
+import com.rustamsaga.tracker_presentation.components.UnitDisplay
 
 @Composable
 fun NutrientBarInfo(
