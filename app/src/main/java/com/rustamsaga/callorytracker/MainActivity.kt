@@ -22,6 +22,7 @@ import com.rustamsaga.onboarding_presentation.height.HeightScreen
 import com.rustamsaga.onboarding_presentation.nutrient_goal.NutrientGoalScreen
 import com.rustamsaga.onboarding_presentation.weight.WeightScreen
 import com.rustamsaga.onboarding_presentation.welcome.WelcomeScreen
+import com.rustamsaga.tracker_presentation.TrackerOverviewScreen
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -81,7 +82,9 @@ class MainActivity : ComponentActivity() {
                             )
                         }
                         composable(Route.TRACKER_OVERVIEW){
-
+                            TrackerOverviewScreen(
+                                onNavigate = navController::navigate
+                            )
                         }
                         composable(Route.SEARCH){
 
