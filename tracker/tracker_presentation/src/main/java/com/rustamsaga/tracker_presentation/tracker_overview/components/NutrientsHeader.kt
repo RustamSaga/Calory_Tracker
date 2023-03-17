@@ -39,14 +39,14 @@ fun NutrientsHeader(
             )
             .background(MaterialTheme.colors.primary)
             .padding(
-                horizontal = spacing.spaceExtraLarge,
+                horizontal = spacing.spaceLarge,
                 vertical = spacing.spaceExtraLarge
             )
     ) {
         Row(
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.SpaceBetween
-        ){
+        ) {
             UnitDisplay(
                 amount = animatedCalorieCount.value,
                 unit = stringResource(id = R.string.kcal),
@@ -66,7 +66,7 @@ fun NutrientsHeader(
                     unit = stringResource(id = R.string.kcal),
                     amountColor = MaterialTheme.colors.onPrimary,
                     amountTextSize = 40.sp,
-                    unitColor = MaterialTheme.colors.onPrimary
+                    unitColor = MaterialTheme.colors.onPrimary,
                 )
             }
         }
